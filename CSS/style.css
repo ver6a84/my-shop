@@ -11,12 +11,21 @@ h1,h2,h3,h4,h5,h6{
 	font-size:inherit;
 	font-weight: inherit;
 }
+ul,ol{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+}
 .wrapper{
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-.hero-header__container {
+.hero-header__container{
   min-height: 100vh;
   background-image: url(../img/hero_image.webp);
   background-size: cover;
@@ -27,12 +36,11 @@ h1,h2,h3,h4,h5,h6{
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: 'Dancing Script', cursive;
   padding-top: clamp(4rem,8vw,10rem);
 }
 .logo{
  text-align: center;
- font-size: 3rem;
+ font-size: 5rem;
  font-weight: bold;
  letter-spacing: 0.2rem;
  margin-bottom: 10rem;
@@ -55,12 +63,21 @@ h1,h2,h3,h4,h5,h6{
 h1{
   font-size: 2rem;
   text-align: center;
-  padding: 0 1rem;
 }
 h2{
   font-size: 1.5rem;
   text-align: center;
-  padding: 0 1rem;
+}
+h3{
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+h4{
+  font-weight:bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 .hero-buttons__container{
   display: flex;
@@ -105,7 +122,6 @@ h2{
   .hero-buttons__container{
     flex-direction: column;
     align-items: center;
-    
     font-size: 0.8rem;
     }
   .btn-primary,
@@ -125,10 +141,10 @@ h2{
     font-size: 2rem;
     margin-bottom: 8rem;
   }
-    h1{
+  h1{
   font-size: 1.4rem;
   }
-h2{
+  h2{
   font-size: 1rem;
   }
 .hero-buttons__container{
@@ -199,9 +215,29 @@ h2{
   width: 10rem;
 }
   }
-
 main{
-  background-color: red;
+  background-color: #f3eaff;
+  color: #4a148c;
+}
+.main-container{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 3rem;
+}
+.offer-cards{
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 2rem;
+}
+.offer-card{
+  border-radius: 20px;
+  background-color: #e8ddfa;
+  padding: 1rem;
+}
+.storefront-img{
+  max-width: 100%;
+  border-radius: 20px;
 }
 footer{
   background-color: black;
