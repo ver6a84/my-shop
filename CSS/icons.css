@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+._icon-star:before {
+  content: "\e90f";
+}
 ._icon-angle-down:before {
   content: "\e90e";
 }

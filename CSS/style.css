@@ -18,7 +18,6 @@ ul,ol{
 }
 body{
   font-family: 'Dancing Script', cursive;
-  font-size: 1.1rem;
 }
 .wrapper{
   display: grid;
@@ -37,6 +36,7 @@ body{
   justify-content: center;
   color: white;
   padding-top: clamp(4rem,8vw,10rem);
+  text-align: center;
 }
 .logo{
  text-align: center;
@@ -62,28 +62,25 @@ body{
 }
 h1{
   font-size: 2rem;
-  text-align: center;
 }
 h2{
   font-size: 1.5rem;
-  text-align: center;
 }
 h3{
   font-size: 3rem;
-  text-align: center;
   font-weight: bolder;
-  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 4rem;
 }
 h4{
   font-weight:bold;
   font-size: 1.3rem;
-  margin-bottom: 1rem;
 }
 .hero-buttons__container{
   display: flex;
   justify-content: center;
   gap: 2rem;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
   padding-top: clamp(3rem,7vw,8rem);
   }
 .btn-primary{
@@ -122,7 +119,6 @@ h4{
   .hero-buttons__container{
     flex-direction: column;
     align-items: center;
-    font-size: 0.8rem;
     }
   .btn-primary,
   .btn-secondary{
@@ -148,7 +144,6 @@ h4{
   font-size: 1rem;
   }
 .hero-buttons__container{
-    font-size: 0.8rem;
     flex-direction: column;
     align-items: center;
     gap: 1.3rem;
@@ -177,7 +172,6 @@ h4{
     font-size: 1rem;
     }
     .hero-buttons__container{
-      font-size: 0.8rem;
       align-items: flex-start;
       padding-top: 2rem;
     }
@@ -202,7 +196,6 @@ h2{
   font-size: 1rem;
   }
 .hero-buttons__container{
-  font-size: 0.8rem; 
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -219,26 +212,76 @@ main{
   background-color: #f3eaff;
   color: #4a148c;
 }
-.main-container{
+.container{
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1600px;
   padding-top: 3rem;
 }
 .offer-cards{
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 2rem;
 }
 .offer-card{
+  display: grid;
+  grid-template-rows:
+    clamp(2rem, 2vw, 2.5rem)   
+    clamp(2rem, 3vw, 4rem)  
+    1fr;
   border-radius: 20px;
   background-color: #e8ddfa;
-  padding: 1rem;
+  padding: 2rem;
+}
+._icon-star{
+  color: gold;
+  margin-right: 0.2rem;
+}
+li{
+  
+  font-weight: 700;
+}
+.storefront{
+  padding: 0 2rem;
+  margin-bottom: clamp(1rem,4vw,4rem)
 }
 .storefront-img{
+  border-radius: 20px;
+  max-width: 100%;
+}
+.submain-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: 0 2rem;
+  margin-bottom: clamp(1rem,4vw,4rem)
+}
+.submain-content {
+  display: grid;
+  grid-template-rows:auto auto 1fr ; 
+  gap: 1.5rem;
+                   
+}
+.submain-img{
   max-width: 100%;
   border-radius: 20px;
 }
+.store-name{
+  color: gold;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.feature {
+  display: grid;
+  background-color: #e8ddfa;
+  padding: 1rem;
+  border-radius: 20px;
+  gap: 1rem;
+}
+
 footer{
   background-color: black;
 }
