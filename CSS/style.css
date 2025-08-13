@@ -128,7 +128,7 @@ h4{
 
   /* Small phones */
 
-  @media (max-width: 380px){
+  @media (max-width: 360px){
     .hero-header__container {
     flex-direction: column;
     align-items: center;
@@ -238,7 +238,6 @@ main{
   margin-right: 0.2rem;
 }
 li{
-  
   font-weight: 700;
 }
 .storefront{
@@ -281,9 +280,9 @@ li{
   border-radius: 20px;
   gap: 1rem;
 }
-
 footer{
-  background-color: black;
+  
+  
 }
 
 
