@@ -35,7 +35,7 @@ body{
 }
 .hero-header-container{
   min-height: 100vh;
-   background-image: 
+  background-image: 
   linear-gradient(to right, rgba(126, 87, 194, 0.8), rgba(126, 87, 194, 0.1)),
   url(../img/hero_image.webp);
   background-size: cover;
@@ -145,10 +145,9 @@ main{
 }
 .storefront{
   padding-inline: clamp(1rem, 2vw, 2rem);
-  margin-bottom: clamp(0.8rem,1vw,2rem)
+  margin-bottom: clamp(0.8rem, 1vw, 2rem);
 }
 .storefront-img{
-  max-height: 90vh;
   border-radius: 20px;
   width: 100%;
 }
@@ -158,7 +157,7 @@ main{
   grid-template-columns: 1fr 1fr;
   gap: clamp(1rem, 2vw, 2rem);
   padding-inline: clamp(1rem, 2vw, 2rem);
-  margin-bottom: clamp(1rem,4vw,4rem)
+  margin-bottom: clamp(1rem, 4vw, 4rem)
 }
 .salon-img{
   max-height: 90vh;
@@ -182,54 +181,6 @@ main{
   border-radius: 20px;
   gap: 1rem;
 }
-@media (max-width: 768px) {
-   .submain-container {
-    grid-template-columns: 1fr;
-  }
-  .submain-title{
-    text-align: center;
-  }
-    .hero-buttons-container {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-self: end;
-    }
-    .btn-secondary,
-    .btn-primary{
-      margin-bottom: 1rem;
-    }
-  }
-@media (orientation: landscape) and (max-height: 500px){
-    .hero-header-container {
-      row-gap: 2rem;
-      padding-top: 2rem;
-     }
-    .offer-cards{
-      padding-top: clamp(1rem, 1vw 2rem);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: clamp(1rem, 2vw, 2rem);
-    }
-    .submain-container {
-    grid-template-columns: 1fr;
-  }
-  .features {
-  padding-top: clamp(1rem, 1vw 2rem);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: clamp(1rem, 2vw, 2rem);
-}
-  }
-@media (orientation: landscape) and (max-height: 360px){
-    .hero-header-container {
-      row-gap: 1rem;
-      padding-top: 1rem;
-     }
-    .hero-buttons-container{
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-    } 
-  }
 footer{
   background-color: #f5f5f5;
 }
@@ -343,4 +294,101 @@ label:nth-child(4){
    rgb(126, 87, 194) 50%,
    rgb(255, 235, 59) 100%);
 }
-
+@media (max-width: 768px) {
+   .submain-container {
+    grid-template-columns: 1fr;
+  }
+  .submain-title{
+    text-align: center;
+  }
+    .hero-buttons-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-self: end;
+    }
+    .btn-secondary,
+    .btn-primary{
+      margin-bottom: 1rem;
+    }
+    .footer-content{  
+    grid-template-columns: 1fr;
+  }
+  .help-form-grid{
+    grid-template-columns: 1fr;
+}
+label:nth-child(3){
+  grid-column: span 1;
+}
+label:nth-child(4){
+  grid-column: span 1;
+}
+.form-button{
+  grid-column: span 1;
+}
+  }
+@media (orientation: landscape) and (max-height: 500px){
+    .hero-header-container {
+      row-gap: 2rem;
+      padding-top: 2rem;
+     }
+    .offer-cards{
+      padding-top: clamp(1rem, 1vw, 2rem);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+    .submain-container {
+    grid-template-columns: 1fr;
+    }
+    .features {
+    padding-top: clamp(1rem, 1vw, 2rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+}
+   .footer-content{  
+    grid-template-columns: 1fr;
+  }
+.help-form-grid{
+    grid-template-columns: 1fr;
+}
+label:nth-child(3){
+  grid-column: span 1;
+}
+label:nth-child(4){
+  grid-column: span 1;
+}
+.form-button{
+  grid-column: span 1;
+}
+.name,
+.email{
+  width:clamp(20rem, 45.4vw, 42rem);
+ }
+  }
+@media (orientation: landscape) and (max-height: 360px){
+    .hero-header-container {
+      row-gap: 1rem;
+      padding-top: 1rem;
+     }
+    .hero-buttons-container{
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+    } 
+     .offer-cards{
+      padding-top: clamp(1rem, 1vw, 2rem);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+    .features {
+    padding-top: clamp(1rem, 1vw, 2rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  .name,
+.email{
+  width:clamp(20rem, 45.4vw, 42rem);
+ }
+}
