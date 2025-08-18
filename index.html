@@ -131,32 +131,39 @@
     </div>
     <div class="help-form">
       <h1>Напишіть нам</h1>
-      <form class="help-form-grid">
+      <div class="form-overlay hidden">
+    <div class="overlay-message">
+      <span class="spinner"></span>
+      <span class="text">Відправляється...</span>
+    </div>
+    </div>
+    <form class="help-form-grid">
         <label>
           Ім'я<br>
-          <input type="text" id="name" name="user_name" placeholder="Ваше ім'я" class="name" required>
+          <input type="text" id="name" name="user_name" autocomplete="name" pattern="^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ\s]+$"
+ placeholder="Ваше ім'я" class="name" required >
         </label>
         <label>
           Email<br>
-          <input type="email" id="email" name="user_email" placeholder="Ваш email" class="email" required>
+          <input type="text" id="email" name="user_email" autocomplete="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" placeholder="Ваш email"  class="email" required>
         </label>
         <label>
           Телефон<br>
-          <input type="tel" id="tel" name="user_tel" pattern="^\+380\d{9}$" placeholder="+380..." class="tel" required>
+          <input type="tel" id="tel" name="user_tel" autocomplete="tel" pattern="^\+380\d{9}$" placeholder="+380..." class="tel" required>
         </label>
         <label>
           Повідомлення<br>
-          <textarea type="message" id="message" name="user_message" placeholder="Ваше повідомлення..." class="message" required></textarea>
+          <textarea id="message" name="user_message" placeholder="Ваше повідомлення..." class="message" required></textarea>
         </label>
-        <button type="submit" class="form-button"><span class="spinner"></span><span class="btn-text">Надіслати</span></button>
+        <button type="submit" class="form-button">Надіслати</button>
       </form>
       </div>
     </div>
   </section>
 </footer>
   </div>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init("b2mz7W1o1e4LwrwL3");</script>
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
   </body>
 </html>
