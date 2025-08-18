@@ -52,7 +52,7 @@ fields.forEach((field) => {
 
 helpForm.addEventListener("submit", function (e) {
   e.preventDefault();
-      const firstInvalid = [...form.elements].find((el) => {
+      const firstInvalid = [...helpForm.elements].find((el) => {
     return el.tagName === 'INPUT' && !el.checkValidity();
   });
 
