@@ -339,7 +339,7 @@ label:nth-child(4){
   border-radius: 15px;
   z-index: 1000;
   font-size: clamp(1.1rem, 1.5vw, 1.5rem);
-  animation: fadeInOut 5s ease forwards;
+  animation: fadeInOut 6s ease forwards;
   text-align: center;
 }
 .form-overlay {
