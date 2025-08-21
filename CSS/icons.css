@@ -10,7 +10,7 @@
   font-display: swap;
 }
 
-[class^="_icon-"]::before, [class*=" _icon-"]::before {
+[class^="icon-"]::before, [class*=" icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -25,51 +25,54 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-star:before {
-  content: "\e90f";
+.icon-address:before {
+  content: "\e910";
 }
-._icon-angle-down:before {
-  content: "\e90e";
+.icon-phone:before {
+  content: "\e90a";
 }
-._icon-cross:before {
-  content: "\e90d";
-}
-._icon-menu-burger:before {
-  content: "\e90b";
-}
-._icon-shopping-cart:before {
-  content: "\e90c";
-}
-._icon-back:before {
+.icon-arrow-left:before {
   content: "\e900";
 }
-._icon-basket:before {
+.icon-arrow-right:before {
   content: "\e901";
 }
-._icon-coins:before {
+.icon-clock:before {
   content: "\e902";
 }
-._icon-forward:before {
+.icon-cross:before {
   content: "\e903";
 }
-._icon-user:before {
+.icon-delivery:before {
   content: "\e904";
 }
-._icon-mail:before {
+.icon-equality:before {
   content: "\e905";
 }
-._icon-phone:before {
+.icon-heart:before {
   content: "\e906";
 }
-._icon-shipping:before {
+.icon-heart_full:before {
   content: "\e907";
 }
-._icon-time:before {
+.icon-left:before {
   content: "\e908";
 }
-._icon-usd:before {
+.icon-menu-burger:before {
   content: "\e909";
 }
-._icon-wallet:before {
-  content: "\e90a";
+.icon-right:before {
+  content: "\e90b";
+}
+.icon-search:before {
+  content: "\e90c";
+}
+.icon-shopping-cart:before {
+  content: "\e90d";
+}
+.icon-star:before {
+  content: "\e90e";
+}
+.icon-user:before {
+  content: "\e90f";
 }

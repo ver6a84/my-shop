@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const nameInput = document.getElementById('name');
-    nameInput.focus({ preventScroll: true }); // 👈 предотвращает автоскролл
+    nameInput.focus({ preventScroll: true }); 
   });
 
 function showToast(message) {
@@ -16,8 +16,7 @@ const overlay = document.querySelector(".form-overlay");
   function showOverlay() {
     overlay.classList.add("visible");
     document.body.style.overflow = "hidden";
-
-  }
+}
 
   function hideOverlay() {
     overlay.classList.remove("visible");
@@ -39,9 +38,7 @@ fields.forEach((field) => {
   field.addEventListener("invalid", () => {
     const message = validationMessages[field.name] || "Заповніть це поле, будь ласка";
     field.setCustomValidity(message); 
-    if (!field.checkValidity()) {
-      field.classList.add("show-errors"); 
-    }
+    field.classList.add("show-errors"); 
   });
 
   field.addEventListener("input", () => {
@@ -52,7 +49,8 @@ fields.forEach((field) => {
 
 helpForm.addEventListener("submit", function (e) {
   e.preventDefault();
-      const firstInvalid = [...helpForm.elements].find((el) => {
+  console.log("ok");
+    const firstInvalid = [...helpForm.elements].find((el) => {
     return el.tagName === 'INPUT' && !el.checkValidity();
   });
 
@@ -66,13 +64,13 @@ helpForm.addEventListener("submit", function (e) {
   showOverlay();
 
   
-  
+  //emailjs.sendForm("service_j7qrtug", "template_suxpbsw", this);
   new Promise((resolve) => {
-  setTimeout(resolve, 1000); // имитируем задержку
+  setTimeout(resolve, 1000); 
 })
 
     .then(() => {
-      this.reset();
+      helpForm.reset();
       fields[0].focus();
       showToast(
         "✅ Повідомлення надіслано!<br>Ми вiдповiмо Вам найближчим часом 😉");
