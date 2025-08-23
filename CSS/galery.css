@@ -21,7 +21,7 @@ textarea {
   border: 2px solid #ccc;
   box-shadow: none;
   outline: none;
-  padding: 0.75em 1em;
+  padding: 0.6em;
   font-size: 1.1rem;
   border-radius: 6px;
   transition: border 0.3s ease;
@@ -59,118 +59,125 @@ body{
     background-color: #7e57c2;
      }
 .galery-header-container{
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 1rem;
-    gap: 300px;
-    }
-    .logo-search{
     display: flex;
-    grid-column: span 2;
-    align-items: center;
     justify-content: space-between;
+    padding: clamp(0.5rem, 4vw, 1.5rem);
+    align-items: center;
+    gap: 1rem;
     }
+
 .logo-img{
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 48px;
 } 
 .search-form{
-  width: 500px;
+  width: 100%;
+  max-width:  500px;
   display: flex;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
 }   
 .search{
-    flex: 1;
+  flex: 1;
   border: none;
-  padding: 10px;
   outline: none;
   border-radius: 8px 0 0 8px;
-
+  text-overflow: ellipsis;
 }
 .search-btn{
   font-size: 1.1rem;
   border: none;
   background-color: #ffeb3b;
   color:#7e57c2;
-  padding: 10px 10px;
   cursor: pointer;
   border-radius: 0 8px 8px 0;
-
-
+  padding-right: clamp(0.5rem, 0.8vw, 1rem);
 }
-.icon-search{
-  padding-left: 10px;
+.search-btn:hover{
+  background-color: #e8ddfa;
+  color: #7e57c2;
 }
-.nav-menu{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+.btn-text{
+  display: none;
+}
+.icon-search::before{
+  padding-left: clamp(0.5rem, 0.8vw, 1rem);
+  padding-right: clamp(0.5rem, 0.8vw, 1rem);
+}
+.close-burger:before{
+  color: #ffeb3b;
+  font-size: 2.6rem;
+}
+.icon-menu-burger::before{
+  color: #ffeb3b;
+  font-size: 3rem;
+}
+.icon-menu-burger{
+  display: inline-block;
+}
+.close-burger{
+  display: none;
+}
+.burger.active .icon-menu-burger{
+  display: none;
+}
+.burger.active .close-burger{
+  display: inline-block;
 }
 .nav-menu-items{
-    display: flex;
-    color: #ffeb3b;
-    gap: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+.nav-menu-items.active{
+  display: block;
+  position: fixed;
+  width: 68%;
+  top: 1.5%;
+  left: 50%;
+  transform: translateX(-47.5%);
+  background: #e8ddfa;
+  text-align: left;
+  line-height: 2;
+  font-size: 2rem;
+  color: #7e57c2;
+  border-radius: 8px;
+  z-index: 1;
+  padding: 1rem 1rem 1rem 4.3rem;
+}
+.nav-menu-item:hover{
+  color: #e8ddfa;
+  
 }
 .nav-menu-item:before{
     padding-right: 5px;
-    font-size: 1rem;
-}
-.account-btn{
-  
-  color: #ffeb3b;
-  cursor: pointer;
+    font-size: 2rem;
 }
 
-.account-menu{
-    opacity: 0;
-    position: absolute;
-    top: 5.85%;
-    left: 68%;
-    border-radius: 8px;
-    text-align: left;
-    color: #7e57c2;
-    padding:0.5rem 0.5rem;
-    line-height: 1.5;
-    background-color: #e8ddfa;
-    z-index: 999;
-    transition: opacity 0.3s ease;
-}
-.account-menu.visible{
-  opacity: 1;
-}
-.contact-btn{
-  cursor: pointer;
-}
+
+
+
+
 .contact-menu{
-    opacity: 0;
-    position: absolute;
-    top: 5.85%;
-    left: 47%;
-    border-radius: 20px;
+    display: none;
+    }
+.contact-menu.active{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 93%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    gap: 2rem;
     text-align: left;
-    padding-top: 0;
-    padding-bottom: clamp(1rem, 1vw, 2rem);
-    padding-left: clamp(1rem, 1vw, 2rem);
-    padding-right: clamp(1rem, 1vw, 2rem);
+    padding: clamp(1rem, 2vw, 2rem);
     background-color: #e8ddfa;
-    z-index: 999;
-    transition: opacity 0.3s ease;
-}
-.contact-menu.visible{
-    opacity: 1;
+    z-index: 2;
 }
   .contact-list{
-    padding-bottom: clamp(1rem, 1vw, 3rem);
     line-height: 1.8;
-  }
-  .contact-list:last-child{
-    padding-block: 0;
-  }
-    .contact-list:first-child{
-    padding-block: 0.9vw;
   }
   .address{
   padding-left: 3px;
@@ -179,7 +186,19 @@ body{
   padding-right: 15px;
   font-size: 1rem;
 }
-
+.close-contact{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  padding: 15px;
+}
+.close-contact:hover{
+  background: red;
+  color: #ffeb3b;
+  padding: 15px;
+  border-radius: 5px;
+}
 
 .life,
 .kyivstar,
@@ -218,5 +237,35 @@ body{
  .mail:before{
   background-image: url('../icons/mail.svg');
  }
+ .account-menu{
+display:none;
+}
+.account-menu.active{
+}
 
-
+@media (min-width: 1024px) {
+  .burger{
+    display: none;
+  }
+  .nav-menu-items{
+    display: flex;
+    color: #ffeb3b;
+    font-size: inherit;
+    gap: clamp(0.1rem, 2vw, 2rem);
+    padding: 0;
+  }
+  .nav-menu-item::before{
+    font-size: inherit;
+  }
+  .btn-text {
+    display: inline-block;
+  }
+  .icon-search:before{
+  padding-right: 10px;
+}
+}
+@media (orientation: landscape) and (max-height: 500px){
+  .nav-menu-items.active{
+    height: 95dvh;
+  }
+}

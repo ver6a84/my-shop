@@ -14,26 +14,28 @@
     <div class="wrapper">
         <header class="galery-header">
         <div class="galery-header-container container">
-            <div class="logo-search">
-            <div class="logo"><img src="../img/Logo.png" alt="Перуки тут" class="logo-img"></div>
-            <form action="" class="search-form">
-              <input type="text" placeholder="Пошук..." class="search">
-              <button type="submit" class="search-btn">Знайти<span class="icon-search"></span></button>
-            </form>
-            </div>
+        <div class="logo"><img src="../img/Logo.png" alt="Перуки тут" class="logo-img"></div>
+        <form action="" class="search-form">
+          <input type="text" placeholder="Я шукаю..." class="search" autofocus>
+          <button type="submit" class="search-btn icon-search"><span class="btn-text">Знайти</span></button>
+        </form>   
     <div class="nav-menu-list">
-        <ul class="nav-menu-items">
+        <button class="burger">
+          <span class="icon-menu-burger"></span>
+          <span class="close-burger icon-cross"></span>
+        </button>
+     <ul class="nav-menu-items">
             <li class="nav-menu-item contact-btn icon-phone">Контакти</li>
             <li class="nav-menu-item account-btn icon-user">Увiйти
-              <ul class="account-menu">
+              <!--<ul class="account-menu">
                 <li><a href="#">Реєстрація</a></li>
                 <li><a href="#">Увiйти</a></li>
-              </ul>
+              </ul>-->
             </li>
             <li class="nav-menu-item icon-heart">Обране</li>
             <li class="nav-menu-item icon-equality">Порiвняння</li>
             <li class="nav-menu-item icon-shopping-cart">Кошик</li>
-        </ul>
+      </ul>
     </div>
     <div class="contact-menu">
         <ul class="contact-list icon-address"><strong>Адреса</strong>
@@ -52,6 +54,7 @@
           <li class="viber">063 436-79-91</li>
           <li class="mail">perukitut@gmail.com</li>
         </ul>
+        <button class="close-contact icon-cross"></button>
     </div>
     </div>
         </header>
