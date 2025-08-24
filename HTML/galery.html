@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="galery-header">
+    <header class="galery-header">
         <div class="galery-header-container container">
         <div class="logo"><img src="../img/Logo.png" alt="Перуки тут" class="logo-img"></div>
         <form action="" class="search-form">
@@ -26,12 +26,14 @@
         </button>
      <ul class="nav-menu-items">
             <li class="nav-menu-item contact-btn icon-phone">Контакти</li>
-            <li class="nav-menu-item account-btn icon-user">Увiйти
-              <!--<ul class="account-menu">
-                <li><a href="#">Реєстрація</a></li>
-                <li><a href="#">Увiйти</a></li>
-              </ul>-->
-            </li>
+            <li  role="none" class="nav-menu-item account-btn icon-user">Увiйти</li>
+            <form action="" class="login-form">
+              <label for="email" class="user-id"><span class="user-id-text">Почта</span><input type="email" id="email"></label>
+              <label for="password" class="user-id"><span class="user-id-text">Пароль</span><input type="password" id="password"></label>
+              <button type="submit" class="login-btn">Увiйти</button>
+              <p class="ques">Немає aкаунту ? </p>
+              <a href="#" class="registr-link">Зареєструватися</a>
+            </form>
             <li class="nav-menu-item icon-heart">Обране</li>
             <li class="nav-menu-item icon-equality">Порiвняння</li>
             <li class="nav-menu-item icon-shopping-cart">Кошик</li>
@@ -57,9 +59,103 @@
         <button class="close-contact icon-cross"></button>
     </div>
     </div>
-        </header>
-        <main></main>
-        <footer></footer>
+  </header>
+<!--  <main>
+    <div class="main-container container">
+      <div class="product-card">
+      <div class="product-storefront"><img src="..//img/example.jpg" alt="" class="product-image"></div>
+
+    <div class="product-info">
+    <h3 class="product-title">Елегантна жіноча перука,коротке пряме волосся з високотемпературного волокна,колір чорний,густота 150%, для щоденного носіння.
+   </h3>
+    <div class="product-price">
+      <span class="price-current">$116.57</span>
+      <span class="price-old">$226.49</span>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="action-btn icon-shopping-cart" title="Додати до кошика"></button>
+    <button class="action-btn icon-heart" title="Додати до обраних"></button>
+    <button class="action-btn icon-compare" title="Порiвняти"></button>
+  </div>
+</div>
+      <div class="product-card">
+      <div class="product-storefront"><img src="..//img/example.jpg" alt="" class="product-image"></div>
+
+    <div class="product-info">
+    <h3 class="product-title">Елегантна жіноча перука,коротке пряме волосся з високотемпературного волокна,колір чорний,густота 150%, для щоденного носіння.
+   </h3>
+    <div class="product-price">
+      <span class="price-current">$116.57</span>
+      <span class="price-old">$226.49</span>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="action-btn icon-shopping-cart" title="Додати до кошика"></button>
+    <button class="action-btn icon-heart" title="Додати до обраних"></button>
+    <button class="action-btn icon-compare" title="Порiвняти"></button>
+  </div>
+</div>
+      <div class="product-card">
+      <div class="product-storefront"><img src="..//img/example.jpg" alt="" class="product-image"></div>
+
+    <div class="product-info">
+    <h3 class="product-title">Елегантна жіноча перука,коротке пряме волосся з високотемпературного волокна,колір чорний,густота 150%, для щоденного носіння.
+   </h3>
+    <div class="product-price">
+      <span class="price-current">$116.57</span>
+      <span class="price-old">$226.49</span>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="action-btn icon-shopping-cart" title="Додати до кошика"></button>
+    <button class="action-btn icon-heart" title="Додати до обраних"></button>
+    <button class="action-btn icon-compare" title="Порiвняти"></button>
+  </div>
+</div>
+      <div class="product-card">
+      <div class="product-storefront"><img src="..//img/example.jpg" alt="" class="product-image"></div>
+
+    <div class="product-info">
+    <h3 class="product-title">Елегантна жіноча перука,коротке пряме волосся з високотемпературного волокна,колір чорний,густота 150%, для щоденного носіння.
+   </h3>
+    <div class="product-price">
+      <span class="price-current">$116.57</span>
+      <span class="price-old">$226.49</span>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="action-btn icon-shopping-cart" title="Додати до кошика"></button>
+    <button class="action-btn icon-heart" title="Додати до обраних"></button>
+    <button class="action-btn icon-compare" title="Порiвняти"></button>
+  </div>
+</div>
+      <div class="product-card">
+      <div class="product-storefront"><img src="..//img/example.jpg" alt="" class="product-image"></div>
+
+    <div class="product-info">
+    <h3 class="product-title">Елегантна жіноча перука,коротке пряме волосся з високотемпературного волокна,колір чорний,густота 150%, для щоденного носіння.
+   </h3>
+    <div class="product-price">
+      <span class="price-current">$116.57</span>
+      <span class="price-old">$226.49</span>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="action-btn icon-shopping-cart" title="Додати до кошика"></button>
+    <button class="action-btn icon-heart" title="Додати до обраних"></button>
+    <button class="action-btn icon-compare" title="Порiвняти"></button>
+  </div>
+</div>
+    </div>
+    
+  </main>-->
+  <footer></footer>
     </div>
     <script src="../JS/galery.js"></script>
 </body>
